@@ -6403,8 +6403,8 @@ components:
           minLength: 1
           description: The company
         country_code:
-          type: string
-          minLength: 1
+          allOf:
+            - $ref: '#/components/schemas/country_code'
           description: Country code
         email:
           allOf:
@@ -6481,8 +6481,8 @@ components:
           minLength: 1
           description: The company
         country_code:
-          type: string
-          minLength: 1
+          allOf:
+            - $ref: '#/components/schemas/country_code'
           description: Country code
         email:
           allOf:
@@ -6855,8 +6855,8 @@ components:
           minLength: 1
           description: Postal code
         country_code:
-          type: string
-          minLength: 1
+          allOf:
+            - $ref: '#/components/schemas/country_code'
           description: Country code
         email:
           allOf:
@@ -11388,7 +11388,6 @@ components:
               allOf:
                 - $ref: '#/components/schemas/postal_code'
             country_code:
-              type: string
               allOf:
                 - $ref: '#/components/schemas/country_code'
         providers:
